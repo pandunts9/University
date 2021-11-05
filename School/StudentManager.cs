@@ -82,6 +82,24 @@ namespace University
             return students;
         }
         /// <summary>
+        /// Removes student by given id
+        /// </summary>
+        /// <param name="students">Given array type of Students</param>
+        /// <param name="id">Given value Guid type</param>
+        /// <returns>Returnes array type of Students</returns>
+        public Student[] Remove(Student[] students,Guid id)
+        {
+            Student[] studentsRefr = new Student[students.Length-1];
+            for (int i = 0; i < studentsRefr.Length; i++)
+            {
+                if(students[i]._id != id)
+                {
+                    studentsRefr[i] = students[i];
+                }
+            }
+            return studentsRefr;
+        }
+        /// <summary>
         /// Prints Students list
         /// </summary>
         public void Print(Student[] students)

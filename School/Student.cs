@@ -18,6 +18,7 @@ namespace University
         public string _name;
         public int _age;
         public int _classN;
+        public int _grade;
         public Teacher _teacher;
         public Guid _id;
     }

@@ -28,6 +28,24 @@ namespace University
             return teachers;
         }
         /// <summary>
+        /// Removes teacher by given id
+        /// </summary>
+        /// <param name="teachers">Given array type of Teacher</param>
+        /// <param name="id">Given value Guid type</param>
+        /// <returns>Returnes array type of Teachers</returns>
+        public Teacher[] Remove(Teacher[] teachers, Guid id)
+        {
+            Teacher[] teachersRefr = new Teacher[teachers.Length - 1];
+            for (int i = 0; i < teachersRefr.Length; i++)
+            {
+                if (teachers[i]._id != id)
+                {
+                    teachersRefr[i] = teachers[i];
+                }
+            }
+            return teachersRefr;
+        }
+        /// <summary>
         /// Prints teacher list
         /// </summary>
         /// <param name="teachers"></param>

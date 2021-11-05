@@ -8,6 +8,10 @@ namespace University
 {
     class UniversityManager
     {
+        public UniversityManager()
+        {
+
+        }
         /// <summary>
         /// Attaching students to teachers in string array
         /// </summary>
@@ -32,5 +36,7 @@ namespace University
             }
             return result;
         }
+
+        
     }
 }
